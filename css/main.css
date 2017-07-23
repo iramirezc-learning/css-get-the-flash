@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+
+/* Normalization */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* End Normalization */
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/the_flash_wallpaper_opacity.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: white;
+    /*font-style: italic;*/
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+    font-family: Bangers;
+}
+
+/* Container */
+.the-flash {
+    position: relative;
+    left: 50px;
+    top: 50px;
+    width: 230px;
+    /*height: 330px;*/
+    height: auto;
+}
+/* End Container */
+
+/* Head */
+.head {
+    position: absolute;
+    top: 3px;
+    left: 18px;
+    width: 193px;
+    height: 164px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: #cb1514;
+}
+
+.eyes {
+    position: relative;
+}
+
+.eye {
+    position: absolute;
+    top: 75px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    /*background-color: #151314;*/
+    background: radial-gradient(circle at 19px 5px, rgb(255, 255, 255), black 20%);
+    z-index: 2;
+}
+
+.eye-right {
+    right: 26px;
+}
+
+.eye-left {
+    left: 22px;
+}
+
+.eye-bright-top {
+    position: relative;
+    top: 1px;
+    left: 12px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.masks {
+    position: relative;
+}
+
+.mask {
+    position: absolute;
+    top: 96px;
+    width: 0;
+    height: 0;
+    border-top: 28px solid #cb1514;
+    border-left: 71px solid transparent;
+    border-right: 71px solid transparent;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+.mask-right {
+    right: -14px;
+}
+
+.mask-left {
+    left: -14px;
+}
+
+.skin {
+    position: absolute;
+    top: 106px;
+    left: 11px;
+    width: 169px;
+    height: 56px;
+    background-color: #f7a688;
+    border-bottom-left-radius: 37px;
+    border-bottom-right-radius: 37px;
+}
+
+.nose {
+    position: absolute;
+    top: 5px;
+    left: 76px;
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid rgba(228, 147, 117, 1);
+    /*border-bottom: 8px solid #e49375;*/
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+.bolts {
+    position: relative;
+}
+
+.bolt {
+    position: absolute;
+    top: 64px;
+    width: 9px;
+    height: 40px;
+    background-color: #fff219;
+    z-index: 1;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.bolt-left {
+    left: -9px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.bolt-right {
+    right: -9px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.bolt-spike {
+    position: absolute;
+    top: -10px;
+    width: 5px;
+    height: 33px;
+    background-color: #fff219;
+}
+
+.bolt-left > .bolt-spike {
+    left: -5px;
+    border-top-left-radius: 5px;
+}
+
+.bolt-right > .bolt-spike {
+    right: -5px;
+    border-top-right-radius: 5px;
+}
+/* End Head */
+
+/* Keyframes */
+.the-flash {
+    animation-name: vibrate, run;
+    animation-duration: 1ms, 3s;
+    animation-timing-function: linear, ease-in;
+    animation-delay: 0s, 1s;
+    animation-iteration-count: infinite, infinite;
+    animation-play-state: running, running;
+}
+
+.the-flash:hover {
+    animation-play-state: running, paused;
+}
+
+@keyframes vibrate {
+    0% {
+        margin-left: 10px;
+    }
+    50% {
+        margin-left: 30px;
+    }
+}
+
+@keyframes run {
+    0% {
+        top: 50px;
+        left: 50px;
+    }
+    5% {
+        top: 50px;
+        left: 1000px;
+    }
+    20% {
+        top: 50px;
+        left: 1000px;
+    }
+    25% {
+        top: 400px;
+        left: 50px;
+    }
+    40% {
+        top: 400px;
+        left: 50px;
+    }
+    45% {
+        top: 400px;
+        left: 1000px;
+    }
+    60% {
+        top: 400px;
+        left: 1000px;
+    }
+    65% {
+        top: 50px;
+        left: 1000px;
+    }
+    75% {
+        top: 50px;
+        left: 1000px;
+    }
+    80% {
+        top: 50px;
+        left: 1000px;
+    }
+    85% {
+        top: 400px;
+        left: 1000px;
+    }
+    95% {
+        top: 400px;
+        left: 1000px;
+    }
+    100% {
+        top: 50px;
+        left: 50px;
+    }
+}
+/* End Transitions */
